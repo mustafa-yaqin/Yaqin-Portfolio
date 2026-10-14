@@ -1,0 +1,790 @@
+/* =====================================================
+   رنگ‌ها و تنظیمات پایه
+   ===================================================== */
+:root {
+  --pri: #1565d8;
+  --pri-dark: #0f4fb0;
+  --soft: #e8f1ff;
+  --line: #dbe7fa;
+  --ink: #0f2547;
+  --muted: #5b6b85;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: Vazirmatn, Tahoma, sans-serif;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
+}
+
+/* با کیبورد (کلید Tab) که روی لینک یا دکمه بروید، یک قاب آبی دیده می‌شود */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--pri);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 20px;
+}
+section {
+  padding: 56px 0;
+}
+.page {
+  min-height: 55vh;
+}
+.not-found {
+  text-align: center;
+}
+.band {
+  background: #f4f8ff;
+}
+.center {
+  text-align: center;
+  margin-top: 28px;
+}
+h1,
+h2,
+h3,
+h4 {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+h2 {
+  font-size: clamp(22px, 4vw, 28px);
+  margin: 0 0 6px;
+  text-align: center;
+  color: var(--pri);
+  cursor: pointer;
+}
+.sub {
+  text-align: center;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+/* =====================================================
+   هدر (بالای صفحه)
+   ===================================================== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 60px;
+}
+
+/* لوگو */
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.3;
+  color: var(--pri);
+  cursor: pointer;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  cursor: pointer;
+}
+.logo b {
+  font-size: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.logo small {
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 500;
+  cursor: pointer;
+}
+.logo-img {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  transition: transform 0.25s;
+  cursor: pointer;
+}
+.logo:hover .logo-img {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+/* منو: با رفتن موس، یک خط آبی زیر لینک می‌آید */
+nav {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  overflow-x: auto;
+  min-width: 0;
+  scrollbar-width: none;
+}
+nav::-webkit-scrollbar {
+  display: none;
+}
+nav a {
+  white-space: nowrap;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+}
+nav a:hover,
+nav a.active {
+  color: var(--pri);
+  border-bottom-color: var(--pri);
+}
+nav a.active {
+  font-weight: 700;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-btn {
+  font-family: inherit;
+  background: #fff;
+  color: var(--pri);
+  border: 1px solid var(--pri);
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+.lang-btn:hover {
+  background: var(--pri);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.header-btn {
+  background: var(--pri);
+  color: #fff;
+  border-radius: 10px;
+  padding: 7px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  cursor: pointer;
+}
+.header-btn:hover {
+  background: var(--pri-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(21, 101, 216, 0.25);
+}
+
+/* =====================================================
+   بالای صفحه خانه (Hero)
+   ===================================================== */
+.hero {
+  background: linear-gradient(180deg, #d9e9ff, #eef5ff 65%, #fff);
+  padding: 56px 0 64px;
+}
+.hero-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.hero-row > * {
+  min-width: 0;
+}
+.hero h1 {
+  font-size: clamp(26px, 5vw, 46px);
+  line-height: 1.5;
+  margin: 0 0 12px;
+  font-weight: 800;
+  color: var(--pri);
+  cursor: pointer;
+}
+.hero p {
+  color: var(--muted);
+  margin: 0 0 24px;
+  max-width: 52ch;
+}
+
+/* دکمه‌ها: با رفتن موس رنگشان عوض می‌شود و کمی بالا می‌آیند */
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-inline-end: 10px;
+  margin-bottom: 8px;
+  border: 1px solid var(--pri);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s,
+    color 0.2s;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(21, 101, 216, 0.25);
+}
+.btn-main {
+  background: var(--pri);
+  color: #fff;
+}
+.btn-main:hover {
+  background: var(--pri-dark);
+  border-color: var(--pri-dark);
+}
+.btn-line {
+  background: #fff;
+  color: var(--pri);
+}
+.btn-line:hover {
+  background: var(--pri);
+  color: #fff;
+}
+.btn-white {
+  background: #fff;
+  color: var(--pri);
+  border-color: #fff;
+  margin: 0;
+}
+.btn-white:hover {
+  background: var(--soft);
+  color: var(--pri-dark);
+}
+
+/* عکس شما */
+.photo {
+  justify-self: center;
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 6px solid #fff;
+  box-shadow: 0 18px 40px rgba(21, 101, 216, 0.25);
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----- حرکت (شناور شدن) عکس -----
+   برای ثابت شدن عکس، فقط همین بخش (از اینجا تا «پایان حرکت عکس») را پاک کنید */
+.photo {
+  animation: float 10s ease-in-out infinite;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+/* ----- پایان حرکت عکس ----- */
+
+/* =====================================================
+   عددها (زیر عکس)
+   ===================================================== */
+.stats {
+  margin-bottom: 64px;
+  margin-top: -34px;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(21, 101, 216, 0.12);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 18px;
+}
+.stats div {
+  text-align: center;
+  padding: 4px 10px;
+  border-inline-end: 1px solid var(--line);
+  border-radius: 12px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+.stats div:last-child {
+  border: 0;
+}
+.stats div:hover {
+  background: var(--soft);
+  transform: translateY(-3px);
+}
+.stats b {
+  display: block;
+  font-size: 28px;
+  color: var(--pri);
+  line-height: 1.4;
+  cursor: pointer;
+}
+.stats span {
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+/* =====================================================
+   درباره من
+   ===================================================== */
+.about-text {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+  color: var(--muted);
+  font-size: 16px;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 24px;
+}
+.skills span {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 6px 16px;
+  font-weight: 500;
+  font-size: 14px;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+.skills span:hover {
+  background: var(--pri);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   کارت‌ها (پروژه‌ها، خدمات، مراحل، تماس)
+   ===================================================== */
+.grid {
+  display: grid;
+  gap: 18px;
+}
+.grid > * {
+  min-width: 0;
+}
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--pri);
+  box-shadow: 0 14px 30px rgba(21, 101, 216, 0.18);
+}
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.card p {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+  flex: 1;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+.project-img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  border: 1px solid var(--line);
+  display: block;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tags span {
+  background: var(--soft);
+  color: var(--pri);
+  border-radius: 20px;
+  padding: 1px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.card-link {
+  align-self: flex-start;
+  margin-top: 12px;
+  color: var(--pri);
+  font-weight: 700;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+}
+.card-link:hover {
+  color: var(--pri-dark);
+  border-bottom-color: var(--pri-dark);
+}
+
+/* شماره روی کارت‌های صفحه خانه */
+.num {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--soft);
+  color: var(--pri);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  margin-bottom: 12px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  cursor: pointer;
+}
+.card:hover .num {
+  background: var(--pri);
+  color: #fff;
+}
+
+/* کارت‌های صفحه تماس */
+.contact-card {
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
+  cursor: pointer;
+}
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--soft);
+  color: var(--color);
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.contact-card:hover .contact-icon {
+  background: var(--color);
+  color: #fff;
+}
+
+/* نوار آبی دعوت به تماس */
+.cta {
+  background: linear-gradient(135deg, #1565d8, #4aa3ff);
+  color: #fff;
+  border-radius: 24px;
+  padding: 48px 24px;
+  text-align: center;
+  margin: 24px 0 8px;
+  box-shadow: 0 18px 40px rgba(21, 101, 216, 0.25);
+}
+.cta h2 {
+  color: #fff;
+}
+.cta p {
+  margin: 0 0 22px;
+  opacity: 0.92;
+}
+
+/* =====================================================
+   فوتر (کارت شناور)
+   ===================================================== */
+footer {
+  padding: 3rem 16px 24px;
+  color: #4f78b0;
+}
+.footer-card {
+  max-width: 1180px;
+  margin: auto;
+  background: #e6f0fd;
+  border: 1px solid #d6e5fa;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(21, 101, 216, 0.2);
+  padding: 2.2rem 2rem 0;
+  overflow: hidden;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 2rem;
+}
+.footer-grid > * {
+  min-width: 0;
+}
+footer h4 {
+  color: #0a2a5c;
+  margin: 1rem 0 0.8rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+.footer-grid > div:not(:first-child) h4 {
+  margin-top: 0;
+}
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+footer li {
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
+}
+footer li:hover {
+  transform: translateX(-3px);
+}
+html[dir="ltr"] footer li:hover {
+  transform: translateX(3px);
+}
+footer li a {
+  transition: color 0.2s;
+  cursor: pointer;
+}
+footer li a:hover {
+  color: #0b6ee6;
+}
+.footer-text {
+  font-size: 13px;
+  margin: 0.8rem 0 0;
+}
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--color);
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+.socials a:hover {
+  background: var(--color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.copyright {
+  text-align: center;
+  border-top: 1px solid #d6e5fa;
+  margin: 2rem -2rem 0;
+  padding: 1.1rem 1rem;
+  font-size: 13px;
+}
+
+/* =====================================================
+   ریسپانسیو (از بزرگ به کوچک)
+   ===================================================== */
+
+/* لپ‌تاپ کوچک و تبلت بزرگ */
+@media (max-width: 1100px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* تبلت */
+@media (max-width: 900px) {
+  .grid3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* این‌ها سه‌تا هستند و کارت تنها نمی‌ماند */
+  .grid3.keep3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero-row {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+  }
+  .hero p {
+    margin-inline: auto;
+  }
+  .photo {
+    order: -1;
+    width: 260px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* ستون اول (لوگو) در ردیف بالا تمام عرض می‌شود */
+  .footer-grid > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* موبایل بزرگ */
+@media (max-width: 760px) {
+  section {
+    padding: 44px 0;
+  }
+  .hero {
+    padding: 36px 0 56px;
+  }
+  .header-row {
+    flex-wrap: wrap;
+    row-gap: 0;
+    padding-top: 8px;
+  }
+  nav {
+    order: 3;
+    width: 100%;
+    padding: 6px 0 8px;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .stats div {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .stats div:last-child {
+    border: 0;
+  }
+}
+
+/* موبایل */
+@media (max-width: 620px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  .grid4,
+  .grid3,
+  .grid3.keep3 {
+    grid-template-columns: 1fr;
+  }
+  .footer-card {
+    padding: 1.6rem 1.2rem 0;
+    border-radius: 20px;
+  }
+  .copyright {
+    margin: 1.6rem -1.2rem 0;
+  }
+  .cta {
+    padding: 36px 18px;
+    border-radius: 20px;
+  }
+  .btn {
+    padding: 11px 20px;
+  }
+}
+
+/* موبایل کوچک */
+@media (max-width: 480px) {
+  .header-btn {
+    display: none;
+  }
+  nav {
+    gap: 14px;
+  }
+  .photo {
+    width: 210px;
+  }
+  .btn {
+    display: block;
+    text-align: center;
+    margin-inline-end: 0;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* اگر کاربر در سیستمش «کاهش حرکت» را روشن کرده باشد، انیمیشن‌ها خاموش می‌شوند */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+  .photo {
+    animation: none;
+  }
+}
