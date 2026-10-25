@@ -1,0 +1,57 @@
+/* قاب پایه همه کارت‌ها */
+
+/* خود کارت: قاب بیرونی. بالای آن «تصویر یا آیکون» و پایین آن «متن» است */
+.card {
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    border-color 0.25s,
+    background 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.card p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 14px;
+  flex: 1;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+
+/* ===== ریسپانسیو: از بزرگ به کوچک ===== */
+
+@media (max-width: 360px) {
+  .card-body {
+      padding: 16px;
+      }
+}

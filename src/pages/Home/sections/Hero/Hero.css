@@ -1,0 +1,108 @@
+/* بالای صفحه خانه (معرفی و عکس) */
+
+.hero {
+  background: var(--hero-bg);
+  padding: 56px 0 64px;
+}
+
+.hero-row {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.hero-row > * {
+  min-width: 0;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 5vw, 46px);
+  line-height: 1.5;
+  margin: 0 0 12px;
+  font-weight: 800;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.hero p {
+  color: var(--muted);
+  margin: 0 0 24px;
+  max-width: 52ch;
+}
+
+/* عکس شما */
+.photo {
+  justify-self: center;
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 6px solid var(--surface);
+  box-shadow: var(--shadow-big);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ----- حرکت (شناور شدن) عکس -----
+   برای ثابت شدن عکس، فقط همین بخش (از اینجا تا «پایان حرکت عکس») را پاک کنید */
+.photo {
+  animation: float 10s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+
+/* ===== ریسپانسیو: از بزرگ به کوچک ===== */
+
+@media (max-width: 900px) {
+  .hero-row {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 28px;
+      }
+  .hero p {
+      margin-inline: auto;
+      }
+  .photo {
+      order: -1;
+      width: 260px;
+      }
+}
+
+@media (max-width: 760px) {
+  .hero {
+      padding: 32px 0 56px;
+      }
+}
+
+@media (max-width: 480px) {
+  .photo {
+      width: 210px;
+      }
+}
+
+@media (max-width: 360px) {
+  .photo {
+      width: 180px;
+      }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo {
+      animation: none;
+      }
+}

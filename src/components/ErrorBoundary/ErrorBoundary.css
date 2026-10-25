@@ -1,0 +1,10 @@
+/* صفحه خطا */
+.boundary {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}

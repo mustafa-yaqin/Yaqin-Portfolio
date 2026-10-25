@@ -1,0 +1,170 @@
+[
+  {
+    "id": "form-validator",
+    "image": "./images/github/form-validator.png",
+    "link": "",
+    "github": "https://github.com/mustafa-yaqin/form-validator",
+    "fa": {
+      "title": "form validator",
+      "text": "",
+      "features": [],
+      "tags": [
+        "CSS"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "form validator",
+      "text": "",
+      "features": [],
+      "tags": [
+        "CSS"
+      ],
+      "linkText": ""
+    }
+  },
+  {
+    "id": "zay",
+    "image": "./images/github/zay.jpg",
+    "link": "https://yaqin-zay-shop.vercel.app",
+    "github": "https://github.com/mustafa-yaqin/Zay",
+    "fa": {
+      "title": "Zay",
+      "text": "قالب فروشگاهی با SCSS.",
+      "features": [],
+      "tags": [
+        "SCSS"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "Zay",
+      "text": "Shop template in SCSS.",
+      "features": [],
+      "tags": [
+        "SCSS"
+      ],
+      "linkText": ""
+    }
+  },
+  {
+    "id": "adventures-game",
+    "image": "./images/github/adventures-game.png",
+    "link": "https://yaqin-adventures-game.vercel.app",
+    "github": "https://github.com/mustafa-yaqin/Adventures-Game",
+    "fa": {
+      "title": "Adventures Game",
+      "text": "بازی ماجراجویی با SCSS.",
+      "features": [],
+      "tags": [
+        "SCSS"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "Adventures Game",
+      "text": "Adventure game in SCSS.",
+      "features": [],
+      "tags": [
+        "SCSS"
+      ],
+      "linkText": ""
+    }
+  },
+  {
+    "id": "todo-app",
+    "image": "./images/github/todo-app.png",
+    "link": "",
+    "github": "https://github.com/mustafa-yaqin/Todo-App",
+    "fa": {
+      "title": "Todo App",
+      "text": "",
+      "features": [],
+      "tags": [
+        "JavaScript"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "Todo App",
+      "text": "",
+      "features": [],
+      "tags": [
+        "JavaScript"
+      ],
+      "linkText": ""
+    }
+  },
+  {
+    "id": "expense-tracker",
+    "image": "./images/github/expense-tracker.png",
+    "link": "",
+    "github": "https://github.com/mustafa-yaqin/Expense-Tracker",
+    "fa": {
+      "title": "Expense Tracker",
+      "text": "",
+      "features": [],
+      "tags": [
+        "CSS"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "Expense Tracker",
+      "text": "",
+      "features": [],
+      "tags": [
+        "CSS"
+      ],
+      "linkText": ""
+    }
+  },
+  {
+    "id": "coder-yaqin",
+    "image": "./images/github/coder-yaqin.png",
+    "link": "",
+    "github": "https://github.com/mustafa-yaqin/Coder_Yaqin",
+    "fa": {
+      "title": "Coder Yaqin",
+      "text": "صفحه معرفی با HTML.",
+      "features": [],
+      "tags": [
+        "HTML"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "Coder Yaqin",
+      "text": "Intro page in HTML.",
+      "features": [],
+      "tags": [
+        "HTML"
+      ],
+      "linkText": ""
+    }
+  },
+  {
+    "id": "my-blog",
+    "image": "./images/github/my-blog.jpg",
+    "link": "",
+    "github": "https://github.com/mustafa-yaqin/My_Blog",
+    "fa": {
+      "title": "My Blog",
+      "text": "",
+      "features": [],
+      "tags": [
+        "CSS"
+      ],
+      "linkText": ""
+    },
+    "en": {
+      "title": "My Blog",
+      "text": "",
+      "features": [],
+      "tags": [
+        "CSS"
+      ],
+      "linkText": ""
+    }
+  }
+]

@@ -1,0 +1,361 @@
+{
+  "exportedAt": "2026-10-25T14:09:16.675Z",
+  "projects": [
+    {
+      "id": "yaqin-code",
+      "image": "",
+      "link": "https://yaqin-code.netlify.app/",
+      "github": "",
+      "fa": {
+        "title": "یقین کد",
+        "text": "سیستم مدیریت روغن‌فروشی با داشبورد، فروش و هشدار کمبود موجودی.",
+        "features": [
+          "داشبورد فروش و آمار",
+          "ثبت فروش روزانه",
+          "هشدار کمبود موجودی"
+        ],
+        "tags": [
+          "داشبورد",
+          "فروش",
+          "موجودی"
+        ],
+        "linkText": "مشاهده سایت"
+      },
+      "en": {
+        "title": "Yaqin Code",
+        "text": "Oil-shop management system with a dashboard, sales and low-stock alerts.",
+        "features": [
+          "Sales dashboard and stats",
+          "Daily sales entry",
+          "Low-stock alerts"
+        ],
+        "tags": [
+          "Dashboard",
+          "Sales",
+          "Inventory"
+        ],
+        "linkText": "View site"
+      }
+    },
+    {
+      "id": "erp",
+      "image": "",
+      "link": "",
+      "github": "",
+      "fa": {
+        "title": "سیستم ERP چندشرکتی",
+        "text": "جایگزین فایل‌های اکسل: مشتریان، گدام، صرافی، تاریخ شمسی، چند ارز، PDF و واتساپ.",
+        "features": [
+          "جایگزین فایل‌های اکسل",
+          "مشتریان، گدام و صرافی",
+          "تاریخ شمسی و چند ارز",
+          "خروجی PDF و ارسال با واتساپ",
+          "زبان دری، پشتو و انگلیسی"
+        ],
+        "tags": [
+          "دری",
+          "پشتو",
+          "English",
+          "چند ارز"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "Multi-company ERP",
+        "text": "Replaces Excel files: customers, warehouses, money exchange, Jalali dates, multiple currencies, PDF and WhatsApp.",
+        "features": [
+          "Replaces Excel files",
+          "Customers, warehouses and money exchange",
+          "Jalali dates and multiple currencies",
+          "PDF export and WhatsApp sharing",
+          "Dari, Pashto and English"
+        ],
+        "tags": [
+          "Dari",
+          "Pashto",
+          "English",
+          "Multi-currency"
+        ],
+        "linkText": ""
+      }
+    },
+    {
+      "id": "customers",
+      "image": "",
+      "link": "",
+      "github": "",
+      "fa": {
+        "title": "سیستم مشتریان و مطالبات",
+        "text": "مدل‌شده روی جدول‌های واقعی گوگل شیت: پروفایل مشتری، رسیدها، فاکتورها و مانده به هر ارز.",
+        "features": [
+          "پروفایل مشتری",
+          "رسیدها و فاکتورها",
+          "مانده حساب به هر ارز",
+          "گزارش مطالبات"
+        ],
+        "tags": [
+          "مطالبات",
+          "فاکتور",
+          "گزارش"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "Customers & receivables",
+        "text": "Modeled on real Google Sheets: customer profiles, receipts, invoices and balances per currency.",
+        "features": [
+          "Customer profiles",
+          "Receipts and invoices",
+          "Balance per currency",
+          "Receivables reports"
+        ],
+        "tags": [
+          "Receivables",
+          "Invoices",
+          "Reports"
+        ],
+        "linkText": ""
+      }
+    },
+    {
+      "id": "accounting",
+      "image": "",
+      "link": "",
+      "github": "",
+      "fa": {
+        "title": "نرم‌افزار حسابداری",
+        "text": "سیستم حسابداری چندشرکتی با دفتر کل دوطرفه، سابقه تغییرات و رابط فارسی.",
+        "features": [
+          "دفتر کل دوطرفه",
+          "چندشرکتی",
+          "ثبت سابقه تغییرات",
+          "رابط فارسی راست‌به‌چپ"
+        ],
+        "tags": [
+          "Next.js",
+          "Django",
+          "PostgreSQL",
+          "JWT"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "Accounting software",
+        "text": "Multi-company accounting system with a double-entry ledger, change history and a Persian interface.",
+        "features": [
+          "Double-entry ledger",
+          "Multi-company",
+          "Change history",
+          "Persian right-to-left interface"
+        ],
+        "tags": [
+          "Next.js",
+          "Django",
+          "PostgreSQL",
+          "JWT"
+        ],
+        "linkText": ""
+      }
+    },
+    {
+      "id": "herat-office",
+      "image": "",
+      "link": "",
+      "github": "",
+      "fa": {
+        "title": "وب‌سایت دفتر رهنمایی معاملات هرات",
+        "text": "وب‌سایت فارسی با ساختار املاک: جستجو، انواع جایداد، رهنمایی و مقالات.",
+        "features": [
+          "جستجوی ملک",
+          "انواع جایداد",
+          "بخش رهنمایی",
+          "مقالات"
+        ],
+        "tags": [
+          "HTML",
+          "CSS",
+          "JS",
+          "RTL"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "Herat Transaction Guidance Office website",
+        "text": "Persian real-estate style website: search, property types, guidance and articles.",
+        "features": [
+          "Property search",
+          "Property types",
+          "Guidance section",
+          "Articles"
+        ],
+        "tags": [
+          "HTML",
+          "CSS",
+          "JS",
+          "RTL"
+        ],
+        "linkText": ""
+      }
+    },
+    {
+      "id": "kanban",
+      "image": "",
+      "link": "",
+      "github": "https://github.com/mustafa-yaqin/drag-and-drop",
+      "fa": {
+        "title": "بورد کانبان (Drag & Drop)",
+        "text": "بورد وظایف با ستون‌های انجام‌نشده، در حال انجام و انجام‌شده و کارت‌های قابل کشیدن.",
+        "features": [
+          "سه ستون: انجام‌نشده، در حال انجام، انجام‌شده",
+          "کارت‌های قابل کشیدن",
+          "ساخته‌شده با React و Vite"
+        ],
+        "tags": [
+          "JavaScript",
+          "React",
+          "Vite"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "Kanban board (Drag & Drop)",
+        "text": "Task board with To Do, In Progress and Done columns and draggable cards.",
+        "features": [
+          "Three columns: To Do, In Progress, Done",
+          "Draggable cards",
+          "Built with React and Vite"
+        ],
+        "tags": [
+          "JavaScript",
+          "React",
+          "Vite"
+        ],
+        "linkText": ""
+      }
+    },
+    {
+      "id": "usepopcorn",
+      "image": "",
+      "link": "",
+      "github": "",
+      "fa": {
+        "title": "usePopcorn",
+        "text": "برنامه جستجو و امتیازدهی فیلم‌ها با React.",
+        "features": [
+          "جستجوی فیلم",
+          "امتیازدهی به فیلم‌ها",
+          "ساخته‌شده با React"
+        ],
+        "tags": [
+          "React"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "usePopcorn",
+        "text": "A React app for searching and rating movies.",
+        "features": [
+          "Movie search",
+          "Rate movies",
+          "Built with React"
+        ],
+        "tags": [
+          "React"
+        ],
+        "linkText": ""
+      }
+    },
+    {
+      "id": "color-palette",
+      "image": "",
+      "link": "",
+      "github": "https://github.com/mustafa-yaqin?tab=repositories",
+      "fa": {
+        "title": "Color Palette Generator",
+        "text": "ساخت پالت رنگ با جاوااسکریپت.",
+        "features": [
+          "ساخت پالت رنگ",
+          "ساخته‌شده با جاوااسکریپت"
+        ],
+        "tags": [
+          "JavaScript"
+        ],
+        "linkText": ""
+      },
+      "en": {
+        "title": "Color Palette Generator",
+        "text": "Generate color palettes with JavaScript.",
+        "features": [
+          "Generate color palettes",
+          "Built with JavaScript"
+        ],
+        "tags": [
+          "JavaScript"
+        ],
+        "linkText": ""
+      }
+    }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "fa": "HTML",
+      "en": "HTML"
+    },
+    {
+      "id": 2,
+      "fa": "CSS / SCSS",
+      "en": "CSS / SCSS"
+    },
+    {
+      "id": 3,
+      "fa": "JavaScript",
+      "en": "JavaScript"
+    },
+    {
+      "id": 4,
+      "fa": "React",
+      "en": "React"
+    },
+    {
+      "id": 5,
+      "fa": "Vite",
+      "en": "Vite"
+    },
+    {
+      "id": 6,
+      "fa": "Next.js",
+      "en": "Next.js"
+    },
+    {
+      "id": 7,
+      "fa": "TypeScript",
+      "en": "TypeScript"
+    },
+    {
+      "id": 8,
+      "fa": "Tailwind",
+      "en": "Tailwind"
+    },
+    {
+      "id": 9,
+      "fa": "Python / Django",
+      "en": "Python / Django"
+    },
+    {
+      "id": 10,
+      "fa": "PostgreSQL",
+      "en": "PostgreSQL"
+    },
+    {
+      "id": 11,
+      "fa": "طراحی راست‌به‌چپ",
+      "en": "RTL design"
+    },
+    {
+      "id": 12,
+      "fa": "Git و GitHub",
+      "en": "Git & GitHub"
+    }
+  ]
+}

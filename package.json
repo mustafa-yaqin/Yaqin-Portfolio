@@ -1,0 +1,33 @@
+{
+  "name": "yaqin-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/index.js",
+    "create-admin": "node server/scripts/create-admin.js",
+    "seed": "node server/scripts/seed.js",
+    "export-fallback": "node server/scripts/export-fallback.js",
+    "backup": "node server/scripts/backup.js",
+    "test:server": "node --test server/tests/api.test.js server/tests/setup.test.js server/tests/github.test.js",
+    "dev:web": "vite",
+    "start": "node server/index.js",
+    "setup-code": "node server/scripts/setup-code.js",
+    "import-github": "node server/scripts/import-github.js"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=22.13 <25"
+  }
+}

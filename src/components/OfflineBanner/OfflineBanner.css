@@ -1,0 +1,17 @@
+/* نوار «اینترنت قطع است» */
+.offline-banner {
+  position: fixed;
+  inset-inline: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 20;
+  max-width: 520px;
+  margin-inline: auto;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: var(--shadow-hover);
+}

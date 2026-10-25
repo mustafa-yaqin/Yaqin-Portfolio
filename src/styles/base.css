@@ -1,0 +1,298 @@
+/* رنگ‌ها و تنظیمات پایه کل سایت (روشن/تاریک، فاصله‌ها، دکمه‌ها، شبکه کارت‌ها) */
+
+/* حالت روشن (پالت آبی-خاکستری ملایم) */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f7f6; /* پس‌زمینه اصلی */
+  --surface: #ffffff; /* کارت‌ها */
+  --band: #e9f0ef; /* بخش‌های متمایز */
+  --line: #dce6e5; /* خط دور کارت‌ها */
+  --ink: #1a2b32; /* متن اصلی */
+  --muted: #627781; /* متن فرعی */
+  --accent: #7ba1a8; /* رنگ تأکید */
+  --accent-strong: #4f7a84; /* تأکید برای متن (کنتراست بهتر) */
+  --soft: rgba(123, 161, 168, 0.18);
+  --btn-bg: #1a2b32;
+  --btn-fg: #ffffff;
+  --btn-hover: #2c4550;
+  --github: #343a40;
+  --github-fg: #ffffff; /* رنگ آیکون گیت‌هاب هنگام هاور */
+  --header-bg: rgba(244, 247, 246, 0.88);
+  --hero-bg: linear-gradient(180deg, #dbe8e8, #e9f1f0 62%, #f4f7f6);
+  --art-1: #dfebec;
+  --art-2: #bfd5d8;
+  --art-shape: rgba(255, 255, 255, 0.45);
+  --shadow: 0 2px 10px rgba(26, 43, 50, 0.06);
+  --shadow-hover: 0 18px 38px rgba(26, 43, 50, 0.16);
+  --shadow-big: 0 18px 40px rgba(79, 122, 132, 0.22);
+  --cta-bg: linear-gradient(135deg, #1a2b32, #4f7a84);
+}
+
+/* حالت تاریک (پالت تیره و لوکس) */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d0f12;
+  --surface: #16191e;
+  --band: #111419;
+  --line: #22262f;
+  --ink: #ffffff;
+  --muted: #94a3b8;
+  --accent: #f3f4f6;
+  --accent-strong: #f3f4f6;
+  --soft: rgba(255, 255, 255, 0.07);
+  --btn-bg: #f3f4f6;
+  --btn-fg: #0d0f12;
+  --btn-hover: #ffffff;
+  --github: #f3f4f6;
+  --github-fg: #0d0f12;
+  --header-bg: rgba(13, 15, 18, 0.85);
+  /* هاله نوری ملایم بالا-راست */
+  --hero-bg:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.03) 0%,
+      transparent 50%
+    ),
+    #0d0f12;
+  --art-1: #1d2128;
+  --art-2: #12151a;
+  --art-shape: rgba(255, 255, 255, 0.045);
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-hover: 0 18px 38px rgba(0, 0, 0, 0.55);
+  --shadow-big: 0 18px 40px rgba(0, 0, 0, 0.5);
+  --cta-bg: linear-gradient(135deg, #16191e, #2a2f39);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Vazirmatn, Tahoma, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.9;
+  overflow-x: hidden;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* با کیبورد (کلید Tab) که روی لینک یا دکمه بروید، یک قاب دیده می‌شود */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 56px 0;
+}
+
+.page {
+  min-height: 55vh;
+}
+
+.band {
+  background: var(--band);
+}
+
+.center {
+  text-align: center;
+  margin-top: 28px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+h2 {
+  font-size: clamp(22px, 4vw, 28px);
+  margin: 0 0 6px;
+  text-align: center;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.sub {
+  text-align: center;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+/* دکمه‌ها: با رفتن موس رنگشان عوض می‌شود و کمی بالا می‌آیند */
+.btn {
+  display: inline-block;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin-inline-end: 10px;
+  margin-bottom: 8px;
+  border: 1px solid var(--btn-bg);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background 0.2s,
+    color 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-main {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.btn-main:hover {
+  background: var(--btn-hover);
+  border-color: var(--btn-hover);
+}
+
+.btn-line {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.btn-line:hover {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+/* دکمه داخل نوار تماس (همیشه روشن، چون پشتش تیره است) */
+.btn-white {
+  background: #f3f4f6;
+  color: #0d0f12;
+  border-color: #f3f4f6;
+  margin: 0;
+}
+
+.btn-white:hover {
+  background: #ffffff;
+  color: #0d0f12;
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid > * {
+  min-width: 0;
+}
+
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ستون‌ها خودکار با عرض صفحه کم و زیاد می‌شوند */
+.grid3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.grid3.keep3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+img,
+svg {
+  height: auto;
+}
+
+/* ===== ریسپانسیو: از بزرگ به کوچک ===== */
+
+@media (min-width: 1500px) {
+  .wrap {
+    max-width: 1320px;
+  }
+  .grid4 {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  section {
+    padding: 44px 0;
+  }
+}
+
+@media (max-width: 620px) {
+  .wrap {
+    padding: 0 16px;
+  }
+  .grid4 {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    gap: 16px;
+  }
+  .sub {
+    margin-bottom: 24px;
+  }
+  .btn {
+    padding: 11px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    display: block;
+    text-align: center;
+    margin-inline-end: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .wrap {
+    padding: 0 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
