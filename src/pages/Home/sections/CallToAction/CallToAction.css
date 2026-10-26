@@ -1,0 +1,49 @@
+/* نوار دعوت به تماس */
+
+/* نوار دعوت به تماس */
+.cta {
+  position: relative;
+  overflow: hidden;
+  background: var(--cta-bg);
+  color: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 48px 24px;
+  text-align: center;
+  margin: 24px 0 8px;
+  box-shadow: var(--shadow-big);
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  top: -120px;
+  inset-inline-end: -60px;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.cta > * {
+  position: relative;
+}
+
+.cta h2 {
+  color: #fff;
+}
+
+.cta p {
+  margin: 0 0 22px;
+  opacity: 0.92;
+}
+
+
+/* ===== ریسپانسیو: از بزرگ به کوچک ===== */
+
+@media (max-width: 620px) {
+  .cta {
+      padding: 36px 18px;
+      border-radius: 20px;
+      }
+}

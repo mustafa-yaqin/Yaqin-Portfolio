@@ -1,0 +1,60 @@
+/* پنل مدیریت (با رنگ‌های خود سایت) */
+.adm { min-height: 70vh; background: var(--bg); color: var(--ink); padding-top: 12px; }
+.adm-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; padding: 0 16px; }
+.adm-tabs button { background: none; border: 0; color: var(--ink); font: inherit; padding: 7px 16px; border-radius: 10px; }
+.adm-tabs button.on, .adm-tabs button:hover { background: var(--soft); font-weight: 700; }
+.adm-main { max-width: 980px; margin: 0 auto; padding: 24px 16px 64px; }
+.adm h2, .adm-login h1 { cursor: default; text-align: start; margin: 0 0 12px; }
+
+.adm-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 16px; box-shadow: var(--shadow); }
+.adm-card.clickable { cursor: pointer; }
+.adm-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 4px; }
+.adm-stats .adm-card { display: flex; flex-direction: column; gap: 2px; margin: 0; }
+.adm-stats b { font-size: 28px; }
+.adm-stats span, .adm-muted { color: var(--muted); font-size: 13px; }
+.adm-bars { display: flex; align-items: flex-end; gap: 3px; height: 120px; margin: 12px 0; }
+.adm-bars div { flex: 1; background: var(--accent); border-radius: 3px 3px 0 0; min-height: 4px; }
+
+.adm-btn { display: inline-block; font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 9px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; margin-inline-end: 6px; }
+.adm-btn:hover:not(:disabled) { border-color: var(--accent); }
+.adm-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+.adm-primary { background: var(--btn-bg); color: var(--btn-fg); border-color: var(--btn-bg); font-weight: 700; }
+.adm-danger { color: #c0392b; }
+.adm-error { color: #c0392b; font-size: 14px; margin: 8px 0; }
+.adm-ok { color: var(--accent-strong); font-weight: 700; font-size: 14px; }
+.adm-badge { margin-inline-start: 8px; font-size: 12px; padding: 1px 8px; border-radius: 10px; background: var(--soft); }
+
+.adm input:not([type="checkbox"]):not([type="file"]), .adm textarea, .adm-login input { width: 100%; font: inherit; padding: 8px 10px; border-radius: 9px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.adm textarea { resize: vertical; }
+.adm label, .adm-login label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+.adm label input, .adm label textarea, .adm-login label input { margin-top: 4px; font-weight: 400; }
+.adm .adm-check { display: flex; align-items: center; gap: 8px; font-weight: 400; }
+.adm fieldset { border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px 2px; min-width: 0; }
+.adm legend { padding: 0 8px; font-weight: 700; }
+.adm-two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.adm-form.narrow { max-width: 440px; }
+
+.adm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.adm-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 4px; padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.adm-row:last-child { border-bottom: 0; }
+.adm-grow { flex: 1; min-width: 160px; }
+.adm-row .adm-btn { margin: 0; }
+.adm-row input { flex: 1; min-width: 120px; width: auto; }
+.adm-inline { display: flex; flex-wrap: wrap; gap: 8px; }
+.adm-inline input { flex: 1; min-width: 150px; width: auto; }
+.adm-thumb { width: 56px; height: 36px; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); flex: none; }
+.adm-noimg { display: grid; place-items: center; background: var(--band); color: var(--muted); font-size: 12px; }
+.adm-image { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; flex-wrap: wrap; }
+.adm-image img, .adm-image .adm-noimg { width: 180px; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 10px; border: 1px solid var(--line); }
+.adm-actions { display: flex; gap: 6px; margin-top: 8px; }
+
+.adm-msg.unread { border-inline-start: 4px solid var(--accent-strong); }
+.adm-msg header { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; }
+.adm-msg-text { white-space: pre-wrap; overflow-wrap: anywhere; margin: 10px 0; }
+.adm-msg footer { display: flex; gap: 6px; }
+
+.adm-login { min-height: 60vh; display: grid; place-items: center; padding: 20px; background: var(--bg); color: var(--ink); }
+.adm-login .adm-card { width: 100%; max-width: 380px; }
+.adm-login .adm-btn { width: 100%; margin: 4px 0 0; padding: 10px; }
+
+@media (max-width: 720px) { .adm-two { grid-template-columns: 1fr; } .adm-main { padding-inline: 12px; } }

@@ -1,0 +1,157 @@
+/* کارت پروژه و کارت گیت‌هاب */
+
+.tags .star {
+  color: var(--ink);
+}
+
+/* ----- کارت پروژه ----- */
+.media {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--art-1), var(--art-2));
+  border-bottom: 1px solid var(--line);
+}
+
+/* قاب ساده شبیه مرورگر (وقتی عکس نیست یا هنوز بالا نیامده) */
+.media-ph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ph-bar {
+  display: flex;
+  gap: 5px;
+  padding: 9px 12px;
+  background: var(--art-shape);
+}
+
+.ph-bar i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--muted);
+  opacity: 0.45;
+}
+
+.ph-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--accent-strong);
+}
+
+.ph-line {
+  display: block;
+  width: 56%;
+  height: 7px;
+  border-radius: 6px;
+  background: var(--art-shape);
+}
+
+.ph-line.short {
+  width: 34%;
+}
+
+.project-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.card:hover .project-img {
+  transform: scale(1.05);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tags span {
+  background: var(--soft);
+  color: var(--accent-strong);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 1px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* پایین کارت: خط جداکننده و دکمه لینک */
+.card-foot {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.card-link:hover {
+  color: var(--accent-strong);
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+
+.card-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* در حالت فارسی (راست‌به‌چپ) فلش به سمت چپ می‌رود */
+html[dir="rtl"] .arrow {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .card-link:hover .arrow {
+  transform: scaleX(-1) translateX(4px);
+}
+
+/* ----- دو دکمه پایین کارت (جزئیات + لینک سایت) ----- */
+.card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 16px;
+}
+.card-link-out {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* دکمه‌ی ویرایش (فقط برای ادمین) */
+.card-edit {
+  position: absolute;
+  top: 10px;
+  inset-inline-start: 10px;
+  z-index: 3;
+  padding: 3px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}

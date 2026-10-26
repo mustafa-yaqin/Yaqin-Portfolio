@@ -1,0 +1,24 @@
+# Blueprint رندر: یک سرویس که هم سایت را می‌دهد هم API و پنل را. دیسک ماندگار برای دیتابیس و عکس‌ها
+services:
+  - type: web
+    name: yaqin-portfolio          # آدرس: https://yaqin-portfolio.onrender.com (اگر گرفته شده بود، اسم دیگری بگذارید)
+    runtime: node
+    plan: starter                  # دیسک ماندگار فقط روی پلن‌های پولی هست (Free ندارد)
+    region: frankfurt
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    disk:
+      name: portfolio-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+      - key: TRUST_PROXY
+        value: "1"
+      - key: SESSION_SECRET        # رندر خودش یک رشته‌ی تصادفی قوی می‌سازد
+        generateValue: true
+      - key: SETUP_CODE            # موقع ساخت سرویس از شما پرسیده می‌شود؛ یک کد دلخواه (مثلاً ۸ حرف) بنویسید
+        sync: false

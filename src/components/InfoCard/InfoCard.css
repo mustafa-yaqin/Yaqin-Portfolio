@@ -1,0 +1,92 @@
+/* کارت‌های آیکون‌دار (خدمات و مراحل کار) */
+
+/* ----- بالای کارت خدمات و مراحل: یک قاب رنگی با آیکون ----- */
+.card-art {
+  position: relative;
+  height: 112px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--art-1), var(--art-2));
+  border-bottom: 1px solid var(--line);
+}
+
+/* دو دایره محو برای زیبایی */
+.card-art::before, .card-art::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: var(--art-shape);
+  transition: transform 0.4s;
+}
+
+.card-art::before {
+  width: 120px;
+  height: 120px;
+  top: -44px;
+  inset-inline-end: -30px;
+}
+
+.card-art::after {
+  width: 76px;
+  height: 76px;
+  bottom: -30px;
+  inset-inline-start: 18px;
+}
+
+.card:hover .card-art::before {
+  transform: scale(1.18);
+}
+
+.card:hover .card-art::after {
+  transform: scale(1.3);
+}
+
+.art-icon {
+  position: relative;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  color: var(--accent-strong);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  transition:
+    background 0.25s,
+    color 0.25s,
+    transform 0.25s;
+}
+
+.card:hover .art-icon {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* شماره مرحله (فقط در «روش کار من») */
+.num {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  inset-inline-start: 12px;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.art-icon svg {
+  height: auto;
+  max-width: none;
+}

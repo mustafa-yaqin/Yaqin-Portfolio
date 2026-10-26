@@ -1,0 +1,18 @@
+/* پیام وضعیت دریافت از گیت‌هاب */
+.repo-status {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  margin: -12px 0 20px;
+}
+.repo-retry {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ink);
+  padding: 0;
+  cursor: pointer;
+}

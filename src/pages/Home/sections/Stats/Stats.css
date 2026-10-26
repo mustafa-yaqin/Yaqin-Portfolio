@@ -1,0 +1,73 @@
+/* عددها زیر عکس */
+
+/* ----- پایان حرکت عکس ----- */
+.stats {
+  margin-bottom: 64px;
+  margin-top: -34px;
+  position: relative;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow-big);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 18px;
+}
+
+.stats div {
+  text-align: center;
+  padding: 4px 10px;
+  border-inline-end: 1px solid var(--line);
+  border-radius: 12px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+
+.stats div:last-child {
+  border: 0;
+}
+
+.stats div:hover {
+  background: var(--soft);
+  transform: translateY(-3px);
+}
+
+.stats b {
+  display: block;
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.stats span {
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+
+/* ===== ریسپانسیو: از بزرگ به کوچک ===== */
+
+@media (max-width: 760px) {
+  .stats {
+      grid-template-columns: 1fr;
+      margin-top: -28px;
+      }
+  .stats div {
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      padding: 8px 10px;
+      }
+  .stats div:last-child {
+      border: 0;
+      }
+}
+
+@media (max-width: 480px) {
+  .stats b {
+      font-size: 24px;
+      }
+}

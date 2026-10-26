@@ -1,0 +1,24 @@
+.admin-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 16px;
+  padding: 7px 20px;
+  font-size: 14px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+
+.admin-bar a,
+.admin-bar button {
+  color: inherit;
+  background: none;
+  border: 0;
+  font: inherit;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.admin-bar-gap {
+  flex: 1;
+}

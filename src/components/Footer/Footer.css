@@ -1,0 +1,152 @@
+/* فوتر (پایین صفحه) */
+
+footer {
+  padding: 3rem 16px 24px;
+  color: var(--muted);
+}
+
+.footer-card {
+  max-width: 1180px;
+  margin: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-big);
+  padding: 2.2rem 2rem 0;
+  overflow: hidden;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-grid > * {
+  min-width: 0;
+}
+
+footer h4 {
+  color: var(--ink);
+  margin: 1rem 0 0.8rem;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.footer-grid > div:not(:first-child) h4 {
+  margin-top: 0;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+footer li {
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s;
+}
+
+footer li:hover {
+  transform: translateX(-3px);
+}
+
+html[dir="ltr"] footer li:hover {
+  transform: translateX(3px);
+}
+
+footer li a {
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+footer li a:hover {
+  color: var(--ink);
+}
+
+.footer-text {
+  font-size: 13px;
+  margin: 0.8rem 0 0;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--color);
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+
+.socials a:hover {
+  background: var(--color);
+  color: var(--fg, #fff);
+  transform: translateY(-2px);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid var(--line);
+  margin: 2rem -2rem 0;
+  padding: 1.1rem 1rem;
+  font-size: 13px;
+}
+
+
+/* ===== ریسپانسیو: از بزرگ به کوچک ===== */
+
+@media (min-width: 1500px) {
+  .footer-card {
+      max-width: 1320px;
+      }
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      }
+  /* ستون اول (لوگو) در ردیف بالا تمام عرض می‌شود */
+  .footer-grid > div:first-child {
+      grid-column: 1 / -1;
+      }
+}
+
+@media (max-width: 620px) {
+  .footer-card {
+      padding: 1.6rem 1.2rem 0;
+      border-radius: 20px;
+      }
+  .copyright {
+      margin: 1.6rem -1.2rem 0;
+      }
+  footer {
+      padding: 2rem 12px 20px;
+      }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+      grid-template-columns: 1fr;
+      }
+}

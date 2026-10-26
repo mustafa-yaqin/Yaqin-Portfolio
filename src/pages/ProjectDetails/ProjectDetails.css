@@ -1,0 +1,78 @@
+/* صفحه جزئیات یک پروژه */
+.details {
+  max-width: 860px;
+}
+.details h1 {
+  font-size: clamp(24px, 5vw, 36px);
+  line-height: 1.5;
+  margin: 18px 0 8px;
+}
+.details-text {
+  color: var(--muted);
+  font-size: 16px;
+  margin: 0 0 28px;
+}
+.details-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 0;
+}
+.details-back:hover {
+  color: var(--ink);
+}
+/* فلش «بازگشت» برعکس فلش‌های دیگر است */
+html[dir="rtl"] .details-back .back-arrow {
+  transform: none;
+}
+html[dir="ltr"] .details-back .back-arrow {
+  transform: scaleX(-1);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.details-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.details-box h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+.details-box ul {
+  margin: 0;
+  padding-inline-start: 20px;
+  color: var(--muted);
+}
+.details-box li {
+  margin-bottom: 4px;
+}
+.details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.details-actions .btn {
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .details-actions {
+    flex-direction: column;
+  }
+}
